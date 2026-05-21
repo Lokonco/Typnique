@@ -92,7 +92,7 @@ function showIntro() {
     $("#intro-window").show();
     $("#score-submission").show();
 
-    let introText =  "This is a game to test your \\(\\LaTeX\\) skills. <br/> <br/>" +
+    let introText =  "This is a game to test your Typst skills. <br/> <br/>" +
                      " Type as many formulas as you can in " + TIMEOUT_STRING + " (timed game), or play an untimed game (zen mode)!";
     $("#intro-text").html(introText);
 
