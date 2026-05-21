@@ -1,13 +1,13 @@
-# TeXnique
+# [Typnique](https://lokonco.github.io/Typnique/)
+This is a recreation of Texnique for the Typst markdown language using the typst WASM runtime.
+The main goal is to type as many formulas as you can in three minutes (timed game), or play an untimed game (zen mode) using the Typst markdown language.
 
-A LaTeX speed-typesetting game. How many formulas can you recreate in three minutes?
+The current browser build ships with an initial Typst-native set of 50 problems while the rest of the archive is converted over time.
 
-"Here’s a game that puts the fun in ‘underfilled hbox’" --[The Aperiodical](https://aperiodical.com/2019/09/texnique-a-latex-typesetting-game/)
 
-[HackerNews discussion](https://news.ycombinator.com/item?id=20814774)
+### [Typst](https://typst.app/)
+Typst is a new markup-based typesetting system for the sciences. It is designed to be an alternative both to advanced tools like LaTeX and simpler tools like Word and Google Docs.
 
-[Reddit discussion](https://www.reddit.com/r/math/comments/czwusd/texnique_a_latex_typesetting_game/) 
+### [TeXnique](https://texnique.xyz/)
+A LaTeX speed-typesetting game.
 
-## Contribution
-
-Contributors are welcome! If you'd like to contribute a problem, you can do so via [this form](https://forms.gle/DXjPeTL5DbJBhKRv8) or submit a pull request to this repository directly.
