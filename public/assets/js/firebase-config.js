@@ -1,15 +1,14 @@
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDYHw9oVZ84207EQYobb7DcxYHJAeazov8",
-  authDomain: "texnique-v3.firebaseapp.com",
-  projectId: "texnique-v3",
-  storageBucket: "texnique-v3.firebasestorage.app",
-  messagingSenderId: "59805088347",
-  appId: "1:59805088347:web:f780a0440e4e78d0c1dd7e",
-  measurementId: "G-B052LGHXCW"
+  apiKey: "AIzaSyDLXY-LQb6bjyzhB77SiC9BlwrHq5mCjaQ",
+  authDomain: "typnique.firebaseapp.com",
+  projectId: "typnique",
+  storageBucket: "typnique.firebasestorage.app",
+  messagingSenderId: "892574762988",
+  appId: "1:892574762988:web:fd19de9c8606140b5d22c9",
+  measurementId: "G-Z9HXJ2FDXF"
 };
 
-// Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
+// Initialize Firebase (v8 style)
+firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();

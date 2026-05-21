@@ -15,7 +15,7 @@
   </script>
 
   <title>TeXnique</title>
-  <meta name="description" content="A LaTeX Typesetting Game">
+  <meta name="description" content="A Typst Typesetting Game">
   <link rel="icon" type="image/png" href="assets/image/fav.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
 
@@ -44,7 +44,7 @@
 <body>
   <main>
     <!-- Github Corner -->
-    <a href="https://github.com/akshayravikumar/TeXnique" class="github-corner" aria-label="View source on GitHub"><svg
+    <a href="https://github.com/Lokonco/Typnique" class="github-corner" aria-label="View source on GitHub"><svg
         width="80" height="80" viewBox="0 0 250 250"
         style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -90,8 +90,8 @@
     </style>
 
     <div id="container">
-      <p id="title" class="centered-text"> \(\text{\TeX nique}\) </p>
-      <p id="subtitle" class="centered-text"> \(\text{A \LaTeX \, Typesetting Game}\) </p>
+      <p id="title" class="centered-text"> \(\text{\Typ nique}\) </p>
+      <p id="subtitle" class="centered-text"> \(\text{A \Typst \, Typesetting Game}\) </p>
 
       <br>
       <br>
@@ -109,27 +109,19 @@
         <div id="hint-text">
           <b>Hints:</b>
           <ul id="hint-list">
-            <li>No \(\texttt{\$}\) signs needed</li>
+            <li>No <code>$</code> signs needed in the answer box</li>
             <li>All formulas are rendered in display style</li>
-            <li>Use \( \verb \left \) and \( \verb \right \) to correctly size balanced delimiters like \( \verb ( \),
-              \( \texttt \{ \), and \( \verb \lceil \)</li>
-            <li>Prefer \( \verb \bmod \) and \( \verb \pmod \) to \( \verb \mod \)</li>
-            <li>Use \( \verb \mathbf \), not \( \verb \textbf \)
+            <li>Use Typst math functions like <code>sqrt(...)</code>, <code>floor(...)</code>, and <code>root(3, ...)</code></li>
+            <li>Use subscripts and superscripts with <code>_</code> and <code>^</code></li>
+            <li>Use quotes for text operators when needed, like <code>"mod"</code></li>
             <li>Harder problems are worth more points</li>
-            <li>Use <a href="http://detexify.kirelabs.org/classify.html">Detexify</a> to quickly look up unknown symbols
-            </li>
+            <li>Use <a href="https://typst.app/docs/reference/symbols/sym/">Typst DOCS</a> to quickly look up unknown symbols
           </ul>
         </div>
       </div>
 
       <div id="ending-window" style="display: none; text-align: center;">
         <h1>Game Over!</h1>
-        <p id="ending-text"></p>
-        <p>
-          This game was made by Akshay and Rahul. Enjoying it? <a href="https://buymeacoffee.com/fortenforge">Buy us
-            a coffee</a>!
-          ☕
-        </p>
         <!-- Score submission form -->
         <div id="score-submission" style="margin: 20px 0;">
           <input type="text" id="player-name" maxlength="30" placeholder="Enter your name" style="margin-right: 10px;">
