@@ -11,3 +11,5 @@ Typst is a new markup-based typesetting system for the sciences. It is designed 
 ### [TeXnique](https://texnique.xyz/)
 A LaTeX speed-typesetting game.
 
+### [tex2typst](https://github.com/qwinsi/tex2typst)
+This was used to convert the user's input(Typst) into latex to be able to use all the original logic.
