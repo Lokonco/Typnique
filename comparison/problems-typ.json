@@ -77,7 +77,7 @@
   {
     "title": "Definition of the Derivative",
     "description": "17 Equations That Changed the World.",
-    "typst": "(\"d\" f)/(\"d\" x) = lim_(h -> 0) (f(x + h) - f(x))/h"
+    "typst": "(\"d\"f)/(\"d\"x) = lim_(h -> 0) (f(x + h) - f(x))/h"
   },
   {
     "title": "Euler's Formula for Polyhedra",
@@ -92,7 +92,7 @@
   {
     "title": "AM-GM",
     "description": "Fun",
-    "typst": "(x_1 + x_2 + dots.h + x_n)/n >= root(n, x_1 dot x_2 dots.h x_n)"
+    "typst": "(x_1 + x_2 + dots.h.c + x_n)/n >= root(n, x_1 dot x_2 dots.h.c x_n)"
   },
   {
     "title": "Stirling's Approximation",
@@ -102,7 +102,7 @@
   {
     "title": "Stokes' Theorem",
     "description": "Fun",
-    "typst": "integral.double_S (nabla times bold(\"F\")) dot \"d\" bold(\"S\") = integral.cont_Gamma bold(\"F\") dot \"d\" bold(Gamma)"
+    "typst": "integral.double_S (nabla times bold(\"F\")) dot \"d\"bold(\"S\") = integral.cont_Gamma bold(\"F\") dot \"d\"bold(Gamma)"
   },
   {
     "title": "Divergence Theorem",
@@ -207,7 +207,7 @@
   {
     "title": "Representation of the Golden Ratio",
     "description": "Classic",
-    "typst": "phi = sqrt(1 + sqrt(1 + sqrt(1 + sqrt(1 + dots.h))))"
+    "typst": "phi.alt = sqrt(1 + sqrt(1 + sqrt(1 + sqrt(1 + dots.h))))"
   },
   {
     "title": "The Sum of all Positive Integers",
@@ -226,13 +226,13 @@
   },
   {
     "title": "Definition of the Kronecker Delta function",
-    "description": "{cases} ftw",
+    "description": "cases ftw",
     "typst": "delta_(i,j) = cases(0 quad & i != j, 1 quad & i = j)"
   },
   {
     "title": "Bayes' Theorem",
     "description": "bae's theorem",
-    "typst": "P(A | B) = (P(B|A) P(A))/(P(B))"
+    "typst": "P(A|B) = (P(B|A) P(A))/(P(B))"
   },
   {
     "title": "Probability Density Function of the Student's $t$-distribution",
@@ -256,18 +256,18 @@
   },
   {
     "title": "Determinant of a $2 times 2$ matrix",
-    "description": "{matrix}",
+    "description": "matrix",
     "typst": "det mat(delim: \"[\", a, b; c, d) = a d - b c"
   },
   {
     "title": "Sawtooth Function",
-    "description": "mathbb cases floors, this has it all",
-    "typst": "S(x) = cases(x - floor(x) - 1/2 quad & x in RR without ZZ, 0 quad & x in ZZ)"
+    "description": "bb cases floors, this has it all",
+    "typst": "S(x) = cases(x - floor(x) - 1\\/2 quad & x in RR without ZZ, 0 quad & x in ZZ)"
   },
   {
     "title": "Definition of Graham's Number",
     "description": "G = g_{64}",
-    "typst": "g_n = cases(3 arrow.t arrow.t arrow.t arrow.t 3 quad & n = 1, 3 arrow.t^(g_(n-1)) 3 quad & n >= 2 and n in NN)"
+    "typst": "g_n = cases(3 arrow.t arrow.t arrow.t arrow.t 3 quad & n = 1, 3 attach(arrow.t, tr: g_(n-1)) 3 quad & n >= 2 and n in NN)"
   },
   {
     "title": "Burnside's Lemma",
@@ -307,12 +307,12 @@
   {
     "title": "Fermat's Little Theorem",
     "description": "fermat's itty bitty theorem",
-    "typst": "a^p equiv a (mod p)"
+    "typst": "a^p equiv a quad (mod p)"
   },
   {
     "title": "Euler's Theorem",
     "description": "totients",
-    "typst": "gcd(a, n) = 1 => a^(phi(n)) equiv 1 (mod n)"
+    "typst": "gcd(a, n) = 1 ==> a^(phi(n)) equiv 1 quad (mod n)"
   },
   {
     "title": "QM-AM-GM-HM Inequality over 3 variables",
@@ -372,12 +372,12 @@
   {
     "title": "RSA Decryption Algorithm",
     "description": "good ol' rivest",
-    "typst": "m = c^(e^(-1) mod phi.alt(n)) (mod n)"
+    "typst": "m = c^(e^(-1) mod phi.alt(n)) quad (mod n)"
   },
   {
     "title": "Contraposition",
     "description": "logic yo",
-    "typst": "(p => q) <=> (not q => not p)"
+    "typst": "(p ==> q) <==> (not q ==> not p)"
   },
   {
     "title": "Equation of a spring",
@@ -427,7 +427,7 @@
   {
     "title": "Rearrangement Inequality",
     "description": "kinda cool",
-    "typst": "a_1 <= a_2 <= dots.h <= a_n, b_1 <= b_2 <= dots.h <= b_n => sum_(i=1)^n a_i b_i >= sum_(i=1)^n a_(sigma(i)) b_i >= sum_(i=1)^n a_(n+1-i) b_i"
+    "typst": "a_1 <= a_2 <= dots.h.c <= a_n, b_1 <= b_2 <= dots.h.c <= b_n ==> sum_(i=1)^n a_i b_i >= sum_(i=1)^n a_(sigma(i)) b_i >= sum_(i=1)^n a_(n+1-i) b_i"
   },
   {
     "title": "Power Mean",
@@ -447,17 +447,17 @@
   {
     "title": "The Dirichlet Convolution",
     "description": "bruh",
-    "typst": "(f ast g)(n) = sum_(d | n) f(d) g(n/d)"
+    "typst": "(f ast g)(n) = sum_(d|n) f(d) g(n/d)"
   },
   {
     "title": "Sum of a Row of Pascal's Triangle",
     "description": "not sure how else to word it",
-    "typst": "binom(n, 0) + binom(n, 1) + binom(n, 2) + dots.h + binom(n, n) = 2^n"
+    "typst": "binom(n, 0) + binom(n, 1) + binom(n, 2) + dots.h.c + binom(n, n) = 2^n"
   },
   {
     "title": "Alternating Harmonic Series",
     "description": "First use of ln",
-    "typst": "1 - 1/2 + 1/3 - 1/4 + 1/5 - dots.h = ln 2"
+    "typst": "1 - 1/2 + 1/3 - 1/4 + 1/5 - dots.h.c = ln 2"
   },
   {
     "title": "Definitions of Catalan's Constant",
@@ -477,7 +477,7 @@
   {
     "title": "Mertens' therorem",
     "description": "actually his third theorem",
-    "typst": "product_(p in PP)^n (1 - 1/p) ~ e^(-gamma)/log n"
+    "typst": "product_(p in PP)^n (1 - 1/p) ~ e^(-gamma)/(log n)"
   },
   {
     "title": "Green's First Identity",
@@ -502,12 +502,12 @@
   {
     "title": "Functional Equation for the Riemann-Zeta Function",
     "description": "This is the simplest example of a functional equation in the Langlands program. Conjecturally all Hasse-Weil zeta functions have Euler factorizations and functional equations with the Riemann zeta function as just one example.",
-    "typst": "pi^(-s/2) Gamma(s/2) zeta(s) = pi^(-(1-s)/2) Gamma((1-s)/2) zeta(1-s)"
+    "typst": "pi^(-s\\/2) Gamma(s/2) zeta(s) = pi^(-(1-s)\\/2) Gamma((1-s)/2) zeta(1-s)"
   },
   {
     "title": "Well-ordering Principle",
     "description": "Classic. Credit to Eucrue",
-    "typst": "forall M (M subset NN and M != emptyset => exists m_0 [m_0 in M and forall n (n in M => m <= n)])"
+    "typst": "forall M (M subset NN and M != emptyset ==> exists m_0 [m_0 in M and forall n (n in M ==> m <= n)])"
   },
   {
     "title": "Asymptotic Formula for the Dirichlet Divisor Function",
@@ -517,12 +517,12 @@
   {
     "title": "Prime Number Theorem",
     "description": "trivial",
-    "typst": "pi(x) ~ x/log x"
+    "typst": "pi(x) ~ x/(log x)"
   },
   {
     "title": "Cumulative Distribution Function of the Gaussian Distribution",
     "description": "dense",
-    "typst": "Phi(x) = 1/sqrt(2 pi) integral_(-oo)^x e^(-t^2/2) \"d\"t"
+    "typst": "Phi(x) = 1/sqrt(2 pi) integral_(-oo)^x e^(-t^2\\/2) \"d\"t"
   },
   {
     "title": "Chernoff Bound",
@@ -537,7 +537,7 @@
   {
     "title": "Law of Total Probability",
     "description": "shrug",
-    "typst": "PP(A) = sum_(i=1)^n PP(A | B_i) PP(B_i)"
+    "typst": "PP(A) = sum_(i=1)^n PP(A|B_i) PP(B_i)"
   },
   {
     "title": "Linear Least Squares Estimator",
@@ -572,7 +572,7 @@
   {
     "title": "Sum of Divisors",
     "description": "i guess this person likes multiplicative functions",
-    "typst": "sigma(n) = sum_(d|n) d = product_(p^a || n) (p^(a+1)-1)/(p-1)"
+    "typst": "sigma(n) = sum_(d|n) d = product_(p^a||n) ((p^(a+1)-1)/(p-1))"
   },
   {
     "title": "Einstein Field Equations",
@@ -607,7 +607,7 @@
   {
     "title": "Borwein Integral",
     "description": "The pattern famously breaks down after this integral.",
-    "typst": "integral_0^oo sin(x)/x dot sin(x/3)/(x/3) dots.h dot sin(x/13)/(x/13) \"d\"x = pi/2"
+    "typst": "integral_0^oo sin(x)/x sin(x\\/3)/(x\\/3) dots.h.c sin(x\\/13)/(x\\/13) \"d\"x = pi/2"
   },
   {
     "title": "Wigner Semicircle Distribution",
@@ -617,7 +617,7 @@
   {
     "title": "Parseval Gutzmer Formula",
     "description": "Apply the Cauchy Integral Formula to derive",
-    "typst": "f(z) = sum_(k=0)^oo a_k z^k => 1/(2 pi) integral_0^(2 pi) abs(f(r e^(i theta)))^2 \"d\"theta = sum_(k=0)^oo abs(a_k r^k)^2"
+    "typst": "f(z) = sum_(k=0)^oo a_k z^k ==> 1/(2 pi) integral_0^(2 pi) abs(f(r e^(i theta)))^2 \"d\"theta = sum_(k=0)^oo abs(a_k r^k)^2"
   },
   {
     "title": "Fubini's Theorem",
@@ -637,7 +637,7 @@
   {
     "title": "Ampère-Maxwell law",
     "description": "credit to Andrija",
-    "typst": "nabla times bold(\"B\") = mu_0 (bold(\"J\") + epsilon_0 (partial bold(\"E\"))/(partial t))"
+    "typst": "nabla times bold(\"B\") = mu_0 (bold(\"J\") + epsilon_0 (partial\"\"bold(\"E\"))/(partial t))"
   },
   {
     "title": "Gauss's Flux Theorem (differential form)",
@@ -652,17 +652,17 @@
   {
     "title": "Maxwell–Faraday equation",
     "description": "induction",
-    "typst": "nabla times bold(\"E\") = -(partial bold(\"B\"))/(partial t)"
+    "typst": "nabla times bold(\"E\") = -(partial\"\"bold(\"B\"))/(partial t)"
   },
   {
     "title": "Eigenvalue Formula",
     "description": "this yields the characteristic polynomial",
-    "typst": "det(bold(\"A\") - lambda bold(\"I\")) = 0"
+    "typst": "det(bold(\"A\") - lambda\"\"bold(\"I\")) = 0"
   },
   {
     "title": "Collatz Function",
     "description": "The conjecture is that repeated applications of this function always hit 1.",
-    "typst": "f(n) = cases(n/2 quad & n equiv 0 (mod 2), 3n + 1 quad & n equiv 1 (mod 2))"
+    "typst": "f(n) = cases(n\\/2 quad & n equiv 0 quad (mod 2), 3n + 1 quad & n equiv 1 quad(mod 2))"
   },
   {
     "title": "Gamma Function",
@@ -677,12 +677,12 @@
   {
     "title": "Taylor Series",
     "description": "When a = 0, it's a Maclaurin series",
-    "typst": "f(x) = sum_(n = 0)^oo f^((n))(a)/(n!) (x - a)^n"
+    "typst": "f(x) = sum_(n = 0)^oo (f^((n))(a))/(n!) (x - a)^n"
   },
   {
     "title": "Quaternion Multiplication Formula",
     "description": "Hamilton famously carved this formula into the stone of a bridge when he came up with it.",
-    "typst": "bold(\"i\")^2 = bold(\"j\")^2 = bold(\"k\")^2 = bold(\"i\") bold(\"j\") bold(\"k\") = -1"
+    "typst": "bold(\"i\")^2 = bold(\"j\")^2 = bold(\"k\")^2 = bold(\"i\")bold(\"j\")bold(\"k\") = -1"
   },
   {
     "title": "General Solution to First-Order Linear Differential Equations",
@@ -692,7 +692,7 @@
   {
     "title": "Fibonacci Binomial Coefficients Identity",
     "description": "Sum up the shallow diagonals of Pascal's triangle to make Fibonacci numbers",
-    "typst": "F_(n+1) = binom(n, 0) + binom(n-1, 1) + binom(n-2, 2) + dots.h + binom(n - floor(n/2), floor(n/2))"
+    "typst": "F_(n+1) = binom(n, 0) + binom(n-1, 1) + binom(n-2, 2) + dots.h.c+ binom(n - floor(n/2), floor(n/2))"
   },
   {
     "title": "Bellman Optimality Equation",
@@ -702,7 +702,7 @@
   {
     "title": "Definition of a Well-founded Relation",
     "description": "R is well-founded iff every proper subset contains a minimal element with respect to R. Credit to Constantine.",
-    "typst": "(forall S subset.eq X) [S != emptyset => (exists m in S) (forall s in S) not(s R m)]"
+    "typst": "(forall S subset.eq X) [S != emptyset ==> (exists m in S) (forall s in S) not(s R m)]"
   },
   {
     "title": "Estimation Lemma",
@@ -727,7 +727,7 @@
   {
     "title": "Addition of Sound Levels in Decibels",
     "description": "50dB + 50dB --> ~53dB!",
-    "typst": "L_(a b) = 10 log_10 (10^(L_a/10) + 10^(L_b/10))"
+    "typst": "L_(a b) = 10 log_10 (10^(L_a\\/10) + 10^(L_b\\/10))"
   },
   {
     "title": "Fast-Growing Hierarchy",
@@ -762,7 +762,7 @@
   {
     "title": "Gauss's Flux Theorem (integral form)",
     "description": "Use the divergence theorem to get to the differential form.",
-    "typst": "integral.surf_S bold(\"E\") dot \"d\" bold(\"A\") = Q/epsilon_0"
+    "typst": "integral.surf_S bold(\"E\") dot \"d\"bold(\"A\") = Q/epsilon_0"
   },
   {
     "title": "Doppler Effect",
@@ -787,17 +787,17 @@
   {
     "title": "Maxwell-Boltzmann Distribution",
     "description": "Don't have enough statistical mechanics formulas.",
-    "typst": "f(v) = 4 pi v^2 (m/(2 pi k T))^(3/2) e^(-m v^2 / (2 k_B T))"
+    "typst": "f(v) = 4 pi v^2 (m/(2 pi k T))^(3\\/2) e^(-(m v^2) / (2 k_B T))"
   },
   {
     "title": "Cayley-Hamilton Theorem",
     "description": "Square matrices over commutative rings are annihilated by their own characteristic polynomial.",
-    "typst": "p(lambda) = det(lambda bold(\"I\")_n - bold(\"A\")) => p(bold(\"A\")) = 0"
+    "typst": "p(lambda) = det(lambda bold(\"I\")_n - bold(\"A\")) ==> p(bold(\"A\")) = 0"
   },
   {
     "title": "Chudnovsky's Formula for $pi$",
     "description": "This formula, based on a Ramanujan formula, was used to calculate pi to the tens of trillions of digits.",
-    "typst": "1/pi = 12 sum_(k=0)^oo ((-1)^k (6k)! (545140134 k + 13591409))/((3k)! (k!)^3 (640320)^(3k + 3/2))"
+    "typst": "1/pi = 12 sum_(k=0)^oo ((-1)^k (6k)! (545140134 k + 13591409))/((3k)! (k!)^3 (640320)^(3k + 3\\/2))"
   },
   {
     "title": "Residue Theorem",
@@ -807,7 +807,7 @@
   {
     "title": "Center of Mass",
     "description": "In a uniform gravitation field, this is the same as the center of gravity.",
-    "typst": "bold(\"R\") = 1/M integral.triple_Q rho(bold(\"r\")) bold(\"r\") \"d\"V"
+    "typst": "bold(\"R\") = 1/M integral.triple_Q rho(bold(\"r\"))bold(\"r\") \"d\"V"
   },
   {
     "title": "The Fundamental Group of the Circle",
@@ -822,7 +822,7 @@
   {
     "title": "Green's Theorem",
     "description": "Credit to Facejo.",
-    "typst": "integral.cont_C (L \"d\"x + M \"d\"y) = integral.double_D ((partial M)/(partial x) - (partial L)/(partial y)) \"d\"x \"d\"y"
+    "typst": "integral.cont_C (L \"d\"x + M \"d\"y) = integral.double_D ((partial M)/(partial x) - (partial L)/(partial y)) \"d\"x\"d\"y"
   },
   {
     "title": "Portfolio Variance",
@@ -842,12 +842,12 @@
   {
     "title": "Pinsker's inequality",
     "description": "It's possible I'm off by a factor of two here.",
-    "typst": "norm(mu - nu)_\"TV\" <= sqrt(2 D_\"KL\" (mu || nu))"
+    "typst": "norm(mu - nu)_\"TV\" <= sqrt(2 D_\"KL\" (mu||nu))"
   },
   {
     "title": "Sackur-Tetrode equation",
     "description": "Entropy of monatomic ideal gas. Credit to Haydn Gwyn.",
-    "typst": "S/(k_B N) = ln[V/N (4 pi m/(3 h^2) U/N)^(3/2)] + 5/2"
+    "typst": "S/(k_B N) = ln[V/N (4 pi m/(3 h^2) U/N)^(3\\/2)] + 5/2"
   },
   {
     "title": "Condtional Entropy",
@@ -867,7 +867,7 @@
   {
     "title": "Moist Adiabatic Lapse Rate",
     "description": "The rate that the temperature falls with respect to altitude in a wet environment.",
-    "typst": "Gamma_\"w\" = -(\"d\"T)/(\"d\"z) = g (1 + H_\"v\" r/(R_\"sd\" T))/(c_\"pd\" + H_\"v\"^2 r/(R_\"sw\" T^2))"
+    "typst": "Gamma_\"w\" = -(\"d\"T)/(\"d\"z) = g ((1 + (H_\"v\" r)/(R_\"sd\" T)))/((c_\"pd\" + (H_\"v\"^2 r)/(R_\"sw\" T^2)))"
   },
   {
     "title": "Cardano's Formula",
@@ -902,22 +902,22 @@
   {
     "title": "Generalized Stokes' theorem",
     "description": "One theorem to rule them all",
-    "typst": "integral_(partial M) omega = integral_M \"d\" omega"
+    "typst": "integral_(partial M) omega = integral_M \"d\"omega"
   },
   {
     "title": "Cartan's magic formula",
     "description": "A cool little magic trick",
-    "typst": "cal(L)_X = \"d\" compose iota_X + iota_X compose \"d\""
+    "typst": "cal(L)_X = \"d\"compose iota_X + iota_X compose \"d\""
   },
   {
     "title": "Ridge Regression",
     "description": "Estimate coefficients of a regression with L2 regularization",
-    "typst": "ell(bold(\"w\")) = 1/N norm(bold(\"X\") bold(\"w\") - bold(\"y\"))_2^2 + lambda norm(bold(\"w\"))_2^2"
+    "typst": "ell(bold(\"w\")) = 1/N norm(bold(\"X\")bold(\"w\") - bold(\"y\"))_2^2 + lambda norm(bold(\"w\"))_2^2"
   },
   {
     "title": "Evidence Lower Bound (ELBO)",
     "description": "Lower bound on the log-likelihood of observed data",
-    "typst": "L(phi, theta; x) = EE_(z ~ q_phi (dot | x)) [ln (p_theta (x,z))/(q_phi (z | x))]"
+    "typst": "L(phi.alt, theta; x) = EE_(z ~ q_phi.alt (dot | x)) [ln (p_theta (x,z))/(q_phi.alt (z | x))]"
   },
   {
     "title": "Langevin Dynamics (Overdamped)",
