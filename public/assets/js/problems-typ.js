@@ -12,7 +12,7 @@ let problems = [
 		"typst": String.raw`c = sqrt(a^2+b^2)`
 	},
 	{
-		"title": String.raw`Sum of first $n$ Squares`,
+		"title": String.raw`Sum of First $n$ Squares`,
 		"description": "Classic.",
 		"typst": String.raw`sum_(i=1)^n i^2 = (n(n+1)(2n+1))/6`
 	},
@@ -22,7 +22,7 @@ let problems = [
 		"typst": String.raw`c^2 = a^2 + b^2 - 2 a b cos angle C`
 	},
 	{
-		"title": "Legendre's formula",
+		"title": "Legendre's Formula",
 		"description": "Floors.",
 		"typst": String.raw`nu_p (n!) = sum_(i = 1)^oo floor(n/p^i)`
 	},
@@ -57,7 +57,7 @@ let problems = [
 		"typst": String.raw`rho ((partial bold("v"))/(partial t) + bold("v") dot nabla bold("v")) = -nabla p + nabla dot bold("T") + bold("f")`
 	},
 	{
-		"title": "Schrodinger's Equation",
+		"title": "Schrödinger's Equation",
 		"description": "17 Equations That Changed the World.",
 		"typst": String.raw`i planck (partial)/(partial t) Psi = H Psi`
 	},
@@ -137,7 +137,7 @@ let problems = [
 		"typst": String.raw`binom(n, k) = binom(n-1, k) + binom(n-1, k-1)`
 	},
 	{
-		"title": "Hockey-stick Identity",
+		"title": "Hockey-Stick Identity",
 		"description": "Classic.",
 		"typst": String.raw`sum_(i=r)^n binom(i, r) = binom(n+1, r+1)`
 	},
@@ -157,7 +157,7 @@ let problems = [
 		"typst": String.raw`1/sqrt(z - cos psi) = sqrt(2)/pi sum_(m = -oo)^oo Q_(m - 1/2)(z) e^(i m psi)`
 	},
 	{
-		"title": "Binomial identity",
+		"title": "Binomial Identity",
 		"description": "Classic.",
 		"typst": String.raw`(x + y)^n = sum_(k=0)^n binom(n, k) x^(n-k) y^k`
 	},
@@ -172,7 +172,7 @@ let problems = [
 		"typst": String.raw`det(bold("A") + bold("u") bold("v")^top) = (1 + bold("v")^top bold("A")^(-1) bold("u")) det(bold("A"))`
 	},
 	{
-		"title": "Euler Product of the Riemann-Zeta function",
+		"title": "Euler Product of the Riemann-Zeta Function",
 		"description": "Classic.",
 		"typst": String.raw`zeta(s) = sum_(n=1)^oo 1/n^s = product_(p in PP) 1/(1 - p^(-s))`
 	},
@@ -202,7 +202,7 @@ let problems = [
 		"typst": String.raw`integral_0^1 x^(-x) "d"x = sum_(n=1)^oo n^(-n)`
 	},
 	{
-		"title": String.raw`Identity involving $pi$ and $e$`,
+		"title": String.raw`Identity Involving $pi$ and $e$`,
 		"description": "@InertialObservr",
 		"typst": String.raw`product_(n=2)^oo e (1 - 1/n^2)^(n^2) = pi/(e sqrt(e))`
 	},
@@ -212,12 +212,12 @@ let problems = [
 		"typst": String.raw`phi.alt = sqrt(1 + sqrt(1 + sqrt(1 + sqrt(1 + dots.h))))`
 	},
 	{
-		"title": "The Sum of all Positive Integers",
+		"title": "The Sum of All Positive Integers",
 		"description": "Troll.",
 		"typst": String.raw`sum_(n = 1)^oo n = -1/12`
 	},
 	{
-		"title": "Inverse of a complex number",
+		"title": "Inverse of a Complex Number",
 		"description": "Gotta know macron man",
 		"typst": String.raw`z^(-1) = macron(z)/abs(z)^2, forall z != 0`
 	},
@@ -227,7 +227,7 @@ let problems = [
 		"typst": String.raw`(f * g)(t) = integral_(-oo)^oo f(tau) g(t - tau) "d"tau`
 	},
 	{
-		"title": "Definition of the Kronecker Delta function",
+		"title": "Definition of the Kronecker Delta Function",
 		"description": "cases ftw",
 		"typst": String.raw`delta_(i,j) = cases(0 quad & i != j, 1 quad & i = j)`
 	},
@@ -242,7 +242,7 @@ let problems = [
 		"typst": String.raw`f(t) = Gamma((nu + 1)/2) / (sqrt(nu pi) Gamma(nu/2)) (1 + t^2/nu)^(-(nu + 1)/2)`
 	},
 	{
-		"title": "De Morgan's laws",
+		"title": "De Morgan's Laws",
 		"description": "fun",
 		"typst": String.raw`not (P and Q) tack.r (not P) or (not Q)`
 	},
@@ -257,7 +257,7 @@ let problems = [
 		"typst": String.raw`abs(union.big_(i = 1)^n A_i) = sum_(emptyset != J subset.eq {1, dots.h, n}) (-1)^(abs(J) + 1) abs(inter.big_(j in J) A_j)`
 	},
 	{
-		"title": String.raw`Determinant of a $2 times 2$ matrix`,
+		"title": String.raw`Determinant of a $2 times 2$ Matrix`,
 		"description": "matrix",
 		"typst": String.raw`det mat(delim: "[", a, b; c, d) = a d - b c`
 	},
@@ -317,7 +317,7 @@ let problems = [
 		"typst": String.raw`gcd(a, n) = 1 ==> a^(phi(n)) equiv 1 quad (mod n)`
 	},
 	{
-		"title": "QM-AM-GM-HM Inequality over 3 variables",
+		"title": "QM-AM-GM-HM Inequality over 3 Variables",
 		"description": "cool-looking",
 		"typst": String.raw`sqrt((a^2 + b^2 + c^2)/3) >= (a + b + c)/3 >= root(3, a b c) >= 3/(1/a + 1/b + 1/c)`
 	},
@@ -347,12 +347,12 @@ let problems = [
 		"typst": String.raw`integral_a^b f(x) "d"x = lim_(k -> oo) ((b-a) sum_(i = 1)^k (f(a + i(b-a)/k))/k)`
 	},
 	{
-		"title": "Quantum Fourier transform",
+		"title": "Quantum Fourier Transform",
 		"description": "bra ket notation is fun",
 		"typst": String.raw`|x chevron.r |-> 1/sqrt(N) sum_(k = 0)^(N-1) omega_x^k |k chevron.r`
 	},
 	{
-		"title": "Recursive definition of the Hadamard transform",
+		"title": "Recursive Definition of the Hadamard Transform",
 		"description": "matrix in cases",
 		"typst": String.raw`H_m = cases(1 quad & m = 0, 1/sqrt(2) mat(delim: "(", H_(m-1), H_(m-1); H_(m-1), -H_(m-1)) quad & m > 0)`
 	},
@@ -362,7 +362,7 @@ let problems = [
 		"typst": String.raw`W(x,p) = 1/(pi planck) integral_(-oo)^oo chevron.l x + y | hat(rho) | x - y chevron.r e^(-2 i p y\/planck) "d"y`
 	},
 	{
-		"title": "Imaginary numbers",
+		"title": "Imaginary Numbers",
 		"description": "Just gonna add some simple formulas",
 		"typst": String.raw`i^2 = -1`
 	},
@@ -382,12 +382,12 @@ let problems = [
 		"typst": String.raw`(p ==> q) <==> (not q ==> not p)`
 	},
 	{
-		"title": "Equation of a spring",
+		"title": "Equation of a Spring",
 		"description": "Gonna use dots like the physicists do",
 		"typst": String.raw`m dot.double(x) = -k x`
 	},
 	{
-		"title": String.raw`Sum of reciprocals of partial sums of $NN$`,
+		"title": String.raw`Sum of Reciprocals of Partial Sums of $NN$`,
 		"description": "Credit to @IntertialObservr",
 		"typst": String.raw`sum_(i = 2)^oo 1/(sum_(j = 1)^i j) = 1`
 	},
@@ -397,7 +397,7 @@ let problems = [
 		"typst": String.raw`F_n = 1/sqrt(5) (phi^n - (-1)^n/phi^n)`
 	},
 	{
-		"title": String.raw`Sum of first $n$ Cubes`,
+		"title": String.raw`Sum of First $n$ Cubes`,
 		"description": "Classic",
 		"typst": String.raw`sum_(k = 0)^n k^3 = (sum_(k = 0)^n k)^2`
 	},
@@ -477,7 +477,7 @@ let problems = [
 		"typst": String.raw`gamma = lim_(n -> oo) (sum_(k=1)^n 1/k - ln n) = integral_1^oo (1/floor(x) - 1/x) "d"x`
 	},
 	{
-		"title": "Mertens' therorem",
+		"title": "Mertens' Theorem",
 		"description": "actually his third theorem",
 		"typst": String.raw`product_(p in PP)^n (1 - 1/p) ~ e^(-gamma)/(log n)`
 	},
@@ -507,7 +507,7 @@ let problems = [
 		"typst": String.raw`pi^(-s\/2) Gamma(s/2) zeta(s) = pi^(-(1-s)\/2) Gamma((1-s)/2) zeta(1-s)`
 	},
 	{
-		"title": "Well-ordering Principle",
+		"title": "Well-Ordering Principle",
 		"description": "Classic. Credit to Eucrue",
 		"typst": String.raw`forall M (M subset NN and M != emptyset ==> exists m_0 [m_0 in M and forall n (n in M ==> m <= n)])`
 	},
@@ -637,22 +637,22 @@ let problems = [
 		"typst": String.raw`(sqrt(x^2 + y^2) - R)^2 + z^2 = r`
 	},
 	{
-		"title": "Ampère-Maxwell law",
+		"title": "Ampère-Maxwell Law",
 		"description": "credit to Andrija",
 		"typst": String.raw`nabla times bold("B") = mu_0 (bold("J") + epsilon_0 (partial""bold("E"))/(partial t))`
 	},
 	{
-		"title": "Gauss's Flux Theorem (differential form)",
+		"title": "Gauss's Flux Theorem (Differential Form)",
 		"description": "guess we're doing all of Maxwell's equations now huh",
 		"typst": String.raw`nabla dot bold("E") = rho/epsilon_0`
 	},
 	{
-		"title": "Gauss's law for Magnetism",
+		"title": "Gauss's Law for Magnetism",
 		"description": "I'll need to fix this once we discover magnetic monopoles.",
 		"typst": String.raw`nabla dot bold("B") = 0`
 	},
 	{
-		"title": "Maxwell–Faraday equation",
+		"title": "Maxwell–Faraday Equation",
 		"description": "induction",
 		"typst": String.raw`nabla times bold("E") = -(partial""bold("B"))/(partial t)`
 	},
@@ -722,7 +722,7 @@ let problems = [
 		"typst": String.raw`f^((n))(a) = n!/(2 pi i) integral.cont_gamma f(z)/(z-a)^(n+1) "d"z`
 	},
 	{
-		"title": "Defintion of the Quasi-Stationary Distribution",
+		"title": "Definition of the Quasi-Stationary Distribution",
 		"description": "Getting rid of absorbing states.",
 		"typst": String.raw`forall B in cal(B)(cal(X)^a), forall t >= 0, P_nu (Y_t in B, T > t) = nu(B) P_nu (T > t)`
 	},
@@ -762,7 +762,7 @@ let problems = [
 		"typst": String.raw`Delta t = (Delta t_0)/sqrt(1 - v^2/c^2)`
 	},
 	{
-		"title": "Gauss's Flux Theorem (integral form)",
+		"title": "Gauss's Flux Theorem (Integral Form)",
 		"description": "Use the divergence theorem to get to the differential form.",
 		"typst": String.raw`integral.surf_S bold("E") dot "d"bold("A") = Q/epsilon_0`
 	},
@@ -777,7 +777,7 @@ let problems = [
 		"typst": String.raw`P_1 + rho.alt g y_1 + 1/2 rho.alt v_1^2 = P_2 + rho.alt g y_2 + 1/2 rho.alt v_2^2`
 	},
 	{
-		"title": String.raw`Relation between $K_p$ and $K_c$`,
+		"title": String.raw`Relation Between $K_p$ and $K_c$`,
 		"description": "Credit to Freddie Bullard.",
 		"typst": String.raw`K_p = K_c (R T)^(Delta n)`
 	},
@@ -817,7 +817,7 @@ let problems = [
 		"typst": String.raw`pi_1(S^1) tilde.equiv ZZ`
 	},
 	{
-		"title": "Definition of the Operator Norm on a Finite Dimensional Banach Space.",
+		"title": "Definition of the Operator Norm on a Finite Dimensional Banach Space",
 		"description": "Credit to Richik Chakraborty.",
 		"typst": String.raw`{norm(T(x))' / norm(x) : x != 0, x in X} equiv {norm(T(x))' : norm(x) = 1, x in X}`
 	},
@@ -842,17 +842,17 @@ let problems = [
 		"typst": String.raw`H(X) = -sum_(i=1)^n P(x_i) log_2 P(x_i)`
 	},
 	{
-		"title": "Pinsker's inequality",
+		"title": "Pinsker's Inequality",
 		"description": "It's possible I'm off by a factor of two here.",
 		"typst": String.raw`norm(mu - nu)_"TV" <= sqrt(2 D_"KL" (mu||nu))`
 	},
 	{
-		"title": "Sackur-Tetrode equation",
+		"title": "Sackur-Tetrode Equation",
 		"description": "Entropy of monatomic ideal gas. Credit to Haydn Gwyn.",
 		"typst": String.raw`S/(k_B N) = ln[V/N (4 pi m/(3 h^2) U/N)^(3\/2)] + 5/2`
 	},
 	{
-		"title": "Condtional Entropy",
+		"title": "Conditional Entropy",
 		"description": "The amount of information needed to describe the outcome of a random variable given the outcome of another variable.",
 		"typst": String.raw`H(Y|X) = -sum_(x in cal(X), y in cal(Y)) p(x,y) log (p(x,y)/p(x))`
 	},
@@ -897,17 +897,17 @@ let problems = [
 		"typst": String.raw`chevron.l f, g chevron.r = integral_0^(2 pi) f(t) overline(g(t)) "d"t`
 	},
 	{
-		"title": "Definition of a Psuedorandom Generator",
+		"title": "Definition of a Pseudorandom Generator",
 		"description": "Crypto means Cryptography!",
 		"typst": String.raw`abs(Pr_(x <- {0,1}^k) [cal(A)(G(x)) = 1] - Pr_(x <- {0,1}^(p(k))) [cal(A)(x) = 1]) < mu(k)`
 	},
 	{
-		"title": "Generalized Stokes' theorem",
+		"title": "Generalized Stokes' Theorem",
 		"description": "One theorem to rule them all",
 		"typst": String.raw`integral_(partial M) omega = integral_M "d"omega`
 	},
 	{
-		"title": "Cartan's magic formula",
+		"title": "Cartan's Magic Formula",
 		"description": "A cool little magic trick",
 		"typst": String.raw`cal(L)_X = "d"compose iota_X + iota_X compose "d"`
 	},

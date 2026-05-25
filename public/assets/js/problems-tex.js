@@ -12,7 +12,7 @@ let problems = [
 		"latex": String.raw`c = \sqrt{a^2+b^2}`,
 	},
 	{
-		"title": String.raw`Sum of first \(n\) Squares`,
+		"title": String.raw`Sum of First \(n\) Squares`,
 		"description": "Classic.",
 		"latex": String.raw`\sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}`,
 	},
@@ -22,7 +22,7 @@ let problems = [
 		"latex": String.raw`c^2 = a^2 + b^2 - 2ab \cos \angle C`,
 	},
 	{
-		"title": "Legendre's formula",
+		"title": "Legendre's Formula",
 		"description": "Floors.",
 		"latex": String.raw`\nu_p(n!) = \sum_{i = 1}^{\infty} \left \lfloor \dfrac{n}{p^i} \right \rfloor`,
 	},
@@ -57,7 +57,7 @@ let problems = [
 		"latex": String.raw`\rho \left ( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathbf{v} \right) = - \nabla p + \nabla \cdot \mathbf{T} + \mathbf{f}`,
 	},
 	{
-		"title": "Schrodinger's Equation",
+		"title": "Schrödinger's Equation",
 		"description": "17 Equations That Changed the World.",
 		"latex": String.raw`i\hbar\frac{\partial}{\partial t} \Psi = H \Psi`,
 	},
@@ -137,7 +137,7 @@ let problems = [
 		"latex": String.raw`\binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}`,
 	},
 	{
-		"title": "Hockey-stick Identity",
+		"title": "Hockey-Stick Identity",
 		"description": "Classic.",
 		"latex": String.raw`\sum_{i=r}^n \binom{i}{r} = \binom{n+1}{r+1}`,
 	},
@@ -157,7 +157,7 @@ let problems = [
 		"latex": String.raw`\frac{1}{\sqrt{z - \cos \psi}} = \frac{\sqrt{2}}{\pi} \sum_{m = -\infty}^\infty Q_{m - \frac{1}{2}}(z) e^{im\psi}`,
 	},
 	{
-		"title": "Binomial identity",
+		"title": "Binomial Identity",
 		"description": "Classic.",
 		"latex": String.raw`(x + y)^n = \sum_{k=0}^n \binom{n}{k} x^{n-k} y^k`,
 	},
@@ -172,7 +172,7 @@ let problems = [
 		"latex": String.raw`\det (\mathbf{A} + \mathbf{u}\mathbf{v}^{\intercal}) = (1 + \mathbf{v}^\intercal \mathbf{A}^{-1} \mathbf{u}) \det (\mathbf{A})`,
 	},
 	{
-		"title": "Euler Product of the Riemann-Zeta function",
+		"title": "Euler Product of the Riemann-Zeta Function",
 		"description": "Classic.",
 		"latex": String.raw`\zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s} = \prod_{p \in \mathbb{P}} \frac{1}{1 - p^{-s}}`,
 	},
@@ -202,7 +202,7 @@ let problems = [
 		"latex": String.raw`\int_0^1 x^{-x} \mathrm dx = \sum_{n=1}^\infty n^{-n}`,
 	},
 	{
-		"title": String.raw`Identity involving \(\pi\) and \(e\)`,
+		"title": String.raw`Identity Involving \(\pi\) and \(e\)`,
 		"description": "@InertialObservr",
 		"latex": String.raw`\prod_{n=2}^\infty e \left (1 - \frac{1}{n^2} \right)^{n^2} = \frac{\pi}{e \sqrt{e}}`,
 	},
@@ -212,12 +212,12 @@ let problems = [
 		"latex": String.raw`\phi = \sqrt{1 + \sqrt{1 + \sqrt{1 + \sqrt{1 + \cdots}}}}`,
 	},
 	{
-		"title": "The Sum of all Positive Integers",
+		"title": "The Sum of All Positive Integers",
 		"description": "Troll.",
 		"latex": String.raw`\sum_{n = 1}^\infty n = -\frac{1}{12}`,
 	},
 	{
-		"title": "Inverse of a complex number",
+		"title": "Inverse of a Complex Number",
 		"description": "Gotta know \\bar man",
 		"latex": String.raw`z^{-1} = \frac{\bar{z}}{|z|^2}, \forall z \neq 0`,
 	},
@@ -227,7 +227,7 @@ let problems = [
 		"latex": String.raw`(f * g)(t) = \int_{-\infty}^\infty f(\tau) g(t - \tau) \mathrm d\tau`,
 	},
 	{
-		"title": "Definition of the Kronecker Delta function",
+		"title": "Definition of the Kronecker Delta Function",
 		"description": "{cases} ftw",
 		"latex": String.raw`\delta_{i,j} = \begin{cases} 0 & i \neq j \\ 1 & i = j \end{cases}`,
 	},
@@ -242,7 +242,7 @@ let problems = [
 		"latex": String.raw`f(t) = \frac{\Gamma \left ( \frac{\nu + 1}{2} \right )}{\sqrt{\nu \pi} \Gamma \left ( \frac{\nu}{2}\right)} \left ( 1 + \frac{t^2}{\nu} \right) ^{- \frac{\nu + 1}{2}}`,
 	},
 	{
-		"title": "De Morgan's laws",
+		"title": "De Morgan's Laws",
 		"description": "fun",
 		"latex": String.raw`\neg (P \wedge Q ) \vdash (\neg P) \vee (\neg Q)`,
 	},
@@ -257,7 +257,7 @@ let problems = [
 		"latex": String.raw`\left | \bigcup_{i = 1}^n A_i \right | = \sum_{\emptyset \neq J \subseteq \{1, \dots, n\}} (-1)^{|J| + 1} \left | \bigcap_{j \in J} A_j \right |`,
 	},
 	{
-		"title": String.raw`Determinant of a \(2 \times 2\) matrix`,
+		"title": String.raw`Determinant of a \(2 \times 2\) Matrix`,
 		"description": "{matrix}",
 		"latex": String.raw`\det \begin{bmatrix} a & b \\ c & d \end{bmatrix} = ad - bc`,
 	},
@@ -317,7 +317,7 @@ let problems = [
 		"latex": String.raw`\gcd(a, n) = 1 \implies a^{\varphi(n)} \equiv 1 \pmod{n}`,
 	},
 	{
-		"title": "QM-AM-GM-HM Inequality over 3 variables",
+		"title": "QM-AM-GM-HM Inequality over 3 Variables",
 		"description": "cool-looking",
 		"latex": String.raw`\sqrt{\frac{a^2 + b^2 + c^2}{3}} \ge \frac{a + b + c}{3} \ge \sqrt[3]{abc} \ge \frac{3}{\frac{1}{a} + \frac{1}{b} + \frac{1}{c}}`,
 	},
@@ -347,12 +347,12 @@ let problems = [
 		"latex": String.raw`\int_a^b f(x) \mathrm dx = \lim_{k \to \infty} \left ( (b-a) \sum_{i = 1}^{k} \frac{f(a + i\frac{b-a}{k})}{k} \right )`,
 	},
 	{
-		"title": "Quantum Fourier transform",
+		"title": "Quantum Fourier Transform",
 		"description": "bra ket notation is fun",
 		"latex": String.raw`|x\rangle \mapsto \frac{1}{\sqrt{N}} \sum_{k = 0}^{N-1} \omega_x^k |k\rangle`,
 	},
 	{
-		"title": "Recursive definition of the Hadamard transform",
+		"title": "Recursive Definition of the Hadamard Transform",
 		"description": "matrix in cases",
 		"latex": String.raw`H_m = \begin{cases} 1 & m = 0 \\ \frac{1}{\sqrt{2}}\begin{pmatrix} H_{m-1} & H_{m-1} \\ H_{m-1} & -H_{m-1}\end{pmatrix} & m > 0\end{cases}`,
 	},
@@ -362,7 +362,7 @@ let problems = [
 		"latex": String.raw`W(x,p) = \frac{1}{\pi \hbar} \int_{-\infty}^\infty \langle x + y | \hat{\rho} | x - y \rangle e^{-2ipy/\hbar} \mathrm dy`,
 	},
 	{
-		"title": "Imaginary numbers",
+		"title": "Imaginary Numbers",
 		"description": "Just gonna add some simple formulas",
 		"latex": String.raw`i^2 = -1`,
 	},
@@ -382,12 +382,12 @@ let problems = [
 		"latex": String.raw`(p \implies q) \iff (\neg q \implies \neg p)`,
 	},
 	{
-		"title": "Equation of a spring",
+		"title": "Equation of a Spring",
 		"description": "Gonna use dots like the physicists do",
 		"latex": String.raw`m \ddot{x} = -kx`,
 	},
 	{
-		"title": String.raw`Sum of reciprocals of partial sums of \(\ \mathbb{N}\)`,
+		"title": String.raw`Sum of Reciprocals of Partial Sums of \(\ \mathbb{N}\)`,
 		"description": "Credit to @IntertialObservr",
 		"latex": String.raw`\sum_{i = 2}^\infty \frac{1}{\sum_{j = 1}^i j} = 1`,
 	},
@@ -397,7 +397,7 @@ let problems = [
 		"latex": String.raw`F_n = \frac{1}{\sqrt{5}} \left ( \varphi^n  - \frac{(-1)^n}{\varphi^n}\right )`,
 	},
 	{
-		"title": String.raw`Sum of first \(n\) Cubes`,
+		"title": String.raw`Sum of First \(n\) Cubes`,
 		"description": "Classic",
 		"latex": String.raw`\sum_{k = 0}^n k^3 = \left ( \sum_{k = 0}^n k\right )^2`,
 	},
@@ -477,7 +477,7 @@ let problems = [
 		"latex": String.raw`\gamma = \lim_{n \to \infty} \left(\sum_{k=1}^n \frac{1}{k} - \ln n \right) = \int_1^\infty  \left(\frac{1}{\lfloor x \rfloor } - \frac{1}{x} \right) \mathrm dx`,
 	},
 	{
-		"title": "Mertens' therorem",
+		"title": "Mertens' Theorem",
 		"description": "actually his third theorem",
 		"latex": String.raw`\prod_{p \in \mathbb P}^n \left(1-\frac 1 p \right)\sim \frac{e^{-\gamma}}{\log n}`,
 	},
@@ -507,7 +507,7 @@ let problems = [
 		"latex": String.raw`\pi^{-s/2}\Gamma\left(\frac{s}{2}\right)\zeta(s) = \pi^{-(1-s)/2}\Gamma\left(\frac{1-s}{2}\right)\zeta(1-s)`,
 	},
 	{
-		"title": "Well-ordering Principle",
+		"title": "Well-Ordering Principle",
 		"description": "Classic. Credit to Eucrue",
 		"latex": String.raw`\forall M(M\subset \mathbb N \wedge M \ne \emptyset \implies \exists m_0 [ m_0 \in M \wedge \forall n (n \in M \implies m \le n)])`,
 	},
@@ -637,22 +637,22 @@ let problems = [
 		"latex": String.raw`(\sqrt{x^2 + y^2} - R)^2 + z^2 = r`,
 	},
 	{
-		"title": "Ampère-Maxwell law",
+		"title": "Ampère-Maxwell Law",
 		"description": "credit to Andrija",
 		"latex": String.raw`\nabla \times \mathbf{B} = \mu_0\left(\mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}\right)`,
 	},
 	{
-		"title": "Gauss's Flux Theorem (differential form)",
+		"title": "Gauss's Flux Theorem (Differential Form)",
 		"description": "guess we're doing all of Maxwell's equations now huh",
 		"latex": String.raw`\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}`,
 	},
 	{
-		"title": "Gauss's law for Magnetism",
+		"title": "Gauss's Law for Magnetism",
 		"description": "I'll need to fix this once we discover magnetic monopoles.",
 		"latex": String.raw`\nabla \cdot \mathbf{B} = 0`,
 	},
 	{
-		"title": "Maxwell–Faraday equation",
+		"title": "Maxwell–Faraday Equation",
 		"description": "induction",
 		"latex": String.raw`\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}`,
 	},
@@ -722,7 +722,7 @@ let problems = [
 		"latex": String.raw`f^{(n)}(a) = \frac{n!}{2\pi i} \oint_{\gamma} \frac{f(z)}{(z-a)^{n+1}} \mathrm{d}z`,
 	},
 	{
-		"title": "Defintion of the Quasi-Stationary Distribution",
+		"title": "Definition of the Quasi-Stationary Distribution",
 		"description": "Getting rid of absorbing states.",
 		"latex": String.raw`\forall B \in \mathcal{B}(\mathcal{X}^a), \forall t \ge 0, P_\nu(Y_t\in B, T > t) = \nu(B)P_\nu(T>t)`,
 	},
@@ -762,7 +762,7 @@ let problems = [
 		"latex": String.raw`\Delta t=\frac{\Delta t_{0}}{\sqrt{1-\frac{v^{2}}{c^{2}}}}`,
 	},
 	{
-		"title": "Gauss's Flux Theorem (integral form)",
+		"title": "Gauss's Flux Theorem (Integral Form)",
 		"description": "Use the divergence theorem to get to the differential form.",
 		"latex": String.raw`\oiint_S\mathbf{E}\cdot\mathrm{d}\mathbf{A}=\frac{Q}{\varepsilon_{0}}`,
 	},
@@ -777,7 +777,7 @@ let problems = [
 		"latex": String.raw`P_{1} + \varrho gy_{1} + \frac{1}{2} \varrho v_{1}^{2} = P_{2} + \varrho gy_{2} + \frac{1}{2} \varrho v_{2}^{2}`,
 	},
 	{
-		"title": String.raw`Relation between \(K_p\) and \(K_c\)`,
+		"title": String.raw`Relation Between \(K_p\) and \(K_c\)`,
 		"description": "Credit to Freddie Bullard.",
 		"latex": String.raw`K_p = K_c(RT)^{\Delta n}`,
 	},
@@ -817,7 +817,7 @@ let problems = [
 		"latex": String.raw`\pi_1(S^1) \cong \mathbb{Z}`,
 	},
 	{
-		"title": "Definition of the Operator Norm on a Finite Dimensional Banach Space.",
+		"title": "Definition of the Operator Norm on a Finite Dimensional Banach Space",
 		"description": "Credit to Richik Chakraborty.",
 		"latex": String.raw`\left \{ \frac{\| T(x) \|'}{\| x \|} : x \neq 0, x \in X \right \} \equiv \left \{ \| T(x) \|' : \| x \| = 1,  x \in X \right\}`,
 	},
@@ -842,17 +842,17 @@ let problems = [
 		"latex": String.raw`H(X) = -\sum_{i=1}^n P(x_i) \log_2 P(x_i)`,
 	},
 	{
-		"title": "Pinsker's inequality",
+		"title": "Pinsker's Inequality",
 		"description": "It's possible I'm off by a factor of two here.",
 		"latex": String.raw`\|\mu - \nu\|_{\mathrm{ TV}} \le \sqrt{2 D_{\rm KL}(\mu\|\nu)}`,
 	},
 	{
-		"title": "Sackur-Tetrode equation",
+		"title": "Sackur-Tetrode Equation",
 		"description": "Entropy of monatomic ideal gas. Credit to Haydn Gwyn.",
 		"latex": String.raw`\frac{S}{k_BN} = \ln\left[ \frac VN \left( \frac{4\pi m}{3h^2} \frac UN \right)^{3/2} \right] + \frac52`,
 	},
 	{
-		"title": "Condtional Entropy",
+		"title": "Conditional Entropy",
 		"description": "The amount of information needed to describe the outcome of a random variable given the outcome of another variable.",
 		"latex": String.raw`\mathrm H (Y|X)=-\sum_{x \in \mathcal X, y \in \mathcal Y}p(x,y)\log{\frac{p(x,y)}{p(x)}}`,
 	},
@@ -897,17 +897,17 @@ let problems = [
 		"latex": String.raw`\langle f,g\rangle=\int_{0}^{2\pi}f(t)\overline{g(t)}\mathrm{d}t`,
 	},
 	{
-		"title": "Definition of a Psuedorandom Generator",
+		"title": "Definition of a Pseudorandom Generator",
 		"description": "Crypto means Cryptography!",
 		"latex": String.raw`\left | \Pr_{x \leftarrow \{0,1\}^k} [\mathcal A (G(x)) = 1] - \Pr_{x \leftarrow \{0,1\}^{p(k)}} [\mathcal A (x) = 1]\right | < \mu(k)`,
 	},
 	{
-		"title": "Generalized Stokes' theorem",
+		"title": "Generalized Stokes' Theorem",
 		"description": "One theorem to rule them all",
 		"latex": String.raw`\int_{\partial M} \omega = \int_M \mathrm{d} \omega`,
 	},
 	{
-		"title": "Cartan's magic formula",
+		"title": "Cartan's Magic Formula",
 		"description": "A cool little magic trick",
 		"latex": String.raw`\mathcal{L}_X = \mathrm{d} \circ \iota_X + \iota_X \circ \mathrm{d}`,
 	},
