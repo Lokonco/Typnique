@@ -15,24 +15,47 @@ let mobile = false;
 let showShadow = false;
 let skippedProblems = [];
 let showSkipped = false;
+let currentTargetTypst = "";
 
-
-//------------------Typst Conversion---------------------//
-function convertTypstToLatex(typstCode){
-    if (!typstCode || typstCode.trim() == ''){
-        return '';
-    }
-    try {
-        const latexOutput = typst2tex(typstCode);
-        return latexOutput;
-    } catch (error) {
-        throw new Error(`Conversion failed: ${error.message}`);
+async function loadProblems() {
+    if (!Array.isArray(problems) || problems.length === 0) {
+        throw new Error("Typst problem list is empty");
     }
 }
-//------------------------------------------------------//
 
+function renderMath(source, element, displayMode = true) {
+    $(element).empty();
 
+    if (!window.kern) {
+        $(element).text(source);
+        return;
+    }
 
+    try {
+        kern.render(source, element, {
+            throwOnError: false,
+            displayMode: displayMode,
+            output: "html"
+        });
+    } catch (error) {
+        console.error("Typst render error:", error);
+        $(element).text(source);
+    }
+}
+
+function displayTitle(title) {
+    return title
+        .replace(/\$([^$]+)\$/g, function(_, mathText) {
+            return mathText
+                .replace(/dot\.double\(bold\("o"\)\)/g, "ö")
+                .replace(/acute\(bold\("e"\)\)/g, "é")
+                .replace(/\bNN\b/g, "N")
+                .replace(/\bpi\b/g, "π")
+                .replace(/\btau\b/g, "τ")
+                .replace(/\btimes\b/g, "×")
+                .replace(/([A-Za-z])_([A-Za-z0-9]+)/g, "$1$2");
+        });
+}
 
 function mobileCheck() {
   var check = false;
@@ -47,15 +70,6 @@ function shuffleArray(array) {
     }
 }
 
-function displayLaTeXInBody() {
-    renderMathInElement(document.body, {
-        options: {
-            throwOnError: false,
-            display: false
-        }
-    });
-}
-
 // A simple timer
 function displayTime(secs) {
     let minutes = Math.floor(secs / 60) % 60;
@@ -65,7 +79,7 @@ function displayTime(secs) {
 }
 
 function displayInfiniteTime() {
-    katex.render(`\\infty`, $("#timer")[0]);
+    renderMath("infinity", $("#timer")[0], false);
 }
 
 function startTimer(onTimeoutFunc) {
@@ -74,7 +88,7 @@ function startTimer(onTimeoutFunc) {
         secondsRemaining--;
         displayTime(secondsRemaining);
         if (secondsRemaining == 0) {
-            clearInterval(timer);
+            clearInterval(gameTimer);
             onTimeoutFunc();
         }
     }, 1000);
@@ -92,7 +106,7 @@ function showIntro() {
     $("#intro-window").show();
     $("#score-submission").show();
 
-    let introText =  "This is a game to test your Typst skills. <br/> <br/>" +
+    let introText =  "This is a game to test your Typst math skills. <br/> <br/>" +
                      " Type as many formulas as you can in " + TIMEOUT_STRING + " (timed game), or play an untimed game (zen mode)!";
     $("#intro-text").html(introText);
 
@@ -101,7 +115,6 @@ function showIntro() {
       mobile = true;
     }
 
-    displayLaTeXInBody();
     $("#container").show();
 }
 
@@ -111,7 +124,6 @@ function endGame() {
     $("#intro-window").hide();
     $("#game-window").hide();
     $("#ending-window").show();
-    displayLaTeXInBody();
 
     let problemsText = numCorrect + ((numCorrect == 1) ? " problem" : " problems");
     let endingText = "You finished " + problemsText + " for a total score of " + currentScore;
@@ -124,22 +136,18 @@ function endGame() {
       let target = problems[problemsOrder[idx % problems.length]];
       let targetId = 'skipTarget' + idx;
       let skippedProblemsHtml = `
-        <p class="problem-header"><span class="title">${target.title}</span></p>
-        <div class="latex">
+        <p class="problem-header"><span class="title">${escapeHtml(displayTitle(target.title))}</span></p>
+        <div class="math">
           <div id="${targetId}"></div>
         </div>
         <br>
-        <div disabled class="latex-source answer">${target.latex}</div>
+        <div disabled class="math-source answer">${escapeHtml(target.typst)}</div>
         <br><br>
       `;
         $("#skipped-problems").append(skippedProblemsHtml);
 
-        katex.render(target.latex, $("#" + targetId)[0], {
-            throwOnError: false,
-            displayMode: true
-        });
+        renderMath(normalize(target.typst), $("#" + targetId)[0], true);
     });
-    displayLaTeXInBody();
 
     $("#skipped-problems").hide()
     $("#show-skipped-button").text("Show Skipped");
@@ -168,8 +176,6 @@ function startGame(useTimer) {
     $("#game-window").show();
     $("#skipped-problems").html("");
     $("#skipped-problems").hide();
-
-    displayLaTeXInBody();
 
     $("#score").text(0);
 
@@ -207,24 +213,17 @@ function loadProblem() {
     problemNumber += 1;
 
     // load problem text
-    let problemText = "Problem " + problemNumber + ": " + target.title;
+    let problemText = "Problem " + problemNumber + ": " + displayTitle(target.title);
     $("#problem-title").text(problemText);
-    problemPoints = Math.ceil(target.latex.length / 10.0);
+    currentTargetTypst = normalize(target.typst);
+    problemPoints = Math.ceil(currentTargetTypst.length / 10.0);
     let pointsText = "(" + problemPoints + ((problemPoints == 1) ? " point)" : " points)");
     $("#problem-points").text(pointsText);
 
-    displayLaTeXInBody();
-
     // load problem body
-    katex.render(target.latex, $("#target")[0], {
-        throwOnError: false,
-        displayMode: true
-    });
+    renderMath(currentTargetTypst, $("#target")[0], true);
     // load problem body
-    katex.render(target.latex, $("#shadow-target")[0], {
-        throwOnError: false,
-        displayMode: true
-    });
+    renderMath(currentTargetTypst, $("#shadow-target")[0], true);
 
     oldVal = "";
 };
@@ -237,32 +236,23 @@ function normalize(input) {
 }
 
 function validateProblem() {
-    let typstInput = normalize($("#user-input").val());
-    if (typstInput == oldVal) {
-        return;
+    let currentVal = normalize($("#user-input").val());
+    if (currentVal == oldVal) {
+        return; // check to prevent multiple simultaneous triggers
     }
 
-    oldVal = typstInput;
+    oldVal = currentVal;
+    // action to be performed on textarea changed
+    renderMath(currentVal, $("#out")[0], true);
 
-    // Convert Typst → LaTeX
-    let latexOutput;
-    try {
-        latexOutput = convertTypstToLatex(typstInput);
-    } catch (error) {
-        $("#out").html(`<span style="color: red;">Invalid Typst syntax</span>`);
-        return;
-    }
-
-    katex.render(latexOutput, $("#out")[0], {
-        throwOnError: false,
-        displayMode: true
-    });
-
-    if (typstInput == '') {
+    if (currentVal == '') {
+      // Defensively return if the input is empty.
       return;
     }
 
+
     if ($("#target").width() != $("#out").width()) {
+        // Return if the element widths are different.
         return;
     }
 
@@ -289,10 +279,12 @@ function validateProblem() {
                 currentScore += problemPoints;
                 numCorrect += 1;
 
+                // Styling changes
                 $('#out').parent().addClass("correct");
                 $('#user-input').prop("disabled", true);
                 $("#score").text(currentScore);
 
+                // Load new problem
                 setTimeout(loadProblem, 1500);
             }
         });
@@ -433,7 +425,7 @@ $(document).ready(function() {
         const timeRange = $(this).attr('id').replace('-scores', '');
         
         // Update active button
-        $(".leaderboard-controls .latex-button").removeClass('active');
+        $(".leaderboard-controls .typst-button").removeClass('active');
         $(this).addClass('active');
         
         loadLeaderboard(timeRange);
@@ -443,5 +435,15 @@ $(document).ready(function() {
         showIntro();
     });
     
-    showIntro();
+    loadProblems()
+        .then(showIntro)
+        .catch(error => {
+            console.error(error);
+            $("#intro-window").show();
+            $("#game-window").hide();
+            $("#ending-window").hide();
+            $("#intro-text").text("Typst problems could not be loaded. Please refresh and try again.");
+            $("#start-button-timed, #start-button-untimed").prop("disabled", true);
+            $("#container").show();
+        });
 });

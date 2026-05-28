@@ -1,49 +1,41 @@
-/* Regex rules to apply to an inputted latex formula to correct for minor
-   rendering differences. In order to qualify, a normalization must:
-    - produce a nearly visually identical result
-      - for example: \not \exists and \nexists don't look very similar, so this
-        wouldn't count
-    - be equivalently "correct" in some sense
-      - for example: replacing \binom with \begin{pmatrix} doesn't qualify
+/* Regex rules to apply to inputted Typst math.
 
-  These calls are inherently subjective. For example, arguably \mid is more
-  correct in some contexts than | but the symbols are so similar, and the
-  correct practice so little known, that we'll count them all as the same.
-
-  As a rule of thumb, if the only difference between two commands is the spacing
-  they produce, we'll allow a rule to replace them.
+  Normalizations should only cover visually and semantically equivalent input.
+  Most Typst aliases render identically already, so this starts intentionally
+  small and can grow as we find fair shortcuts during playtesting.
 */
 
 let normalizations = [
   {
-    "rule": /\\not\s*\\in(?!\w)/g,
-    "replacement": String.raw`\notin`
+    "rule": /\binfinity\b/g,
+    "replacement": "oo"
   },
   {
-    "rule": /\\not\s*=/g,
-    "replacement": String.raw`\neq`
+    "rule": /\\"/g,
+    "replacement": "\""
   },
   {
-    "rule": /\\mid(?!\w)/g,
-    "replacement": String.raw`|`
+    "rule": /\\+\//g,
+    "replacement": "/"
   },
   {
-    "rule": /\\Longleftrightarrow(?!\w)/g,
-    "replacement": String.raw`\iff `
+    "rule": /\btriangle\b(?!\.)/g,
+    "replacement": "triangle.stroked.t"
   },
   {
-    "rule": /\\Longrightarrow(?!\w)/g,
-    "replacement": String.raw`\implies`
+    "rule": /([A-Za-z0-9_)\]}])\s*:\s*([A-Za-z0-9_({[])/g,
+    "replacement": "$1 colon $2"
+  },
+  {
+    "rule": /,\s+(?=forall\b|exists\b|[A-Z]_[A-Za-z])/g,
+    "replacement": " comma "
+  },
+  {
+    "rule": /(integral(?:_\([^)]*\)|_[^\s^]+)?(?:\^\([^)]*\)|\^[^\s_]+)?)\s*(?=[A-Za-z"])/g,
+    "replacement": "$1 "
+  },
+  {
+    "rule": /"d"\s+(?=[A-Za-z])/g,
+    "replacement": "\"d\""
   }
 ];
-
-try {
-  let space_rule = new RegExp("(?<!\\\\)\\\\ ", "g");
-  normalizations.push({
-    "rule": space_rule,
-    "replacement": " "
-  })
-}
-catch(error) {
-  console.log(error);
-}
