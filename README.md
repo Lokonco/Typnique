@@ -6,12 +6,14 @@ The main goal is to type as many formulas as you can in three minutes (timed gam
 
 ### [Typst](https://typst.app/)
 
-Typst is a new markup-based typesetting system for the sciences. It is designed to be an alternative both to advanced tools like LaTeX and simpler tools like Word and Google Docs.
+Typst is a new markup-based typesetting system for the sciences. It is designed for fast, readable scientific writing and math typesetting.
+
+### [Kern](https://github.com/tejasprabhune/kern)
+
+A fast, zero-dependency JavaScript library that renders Typst math syntax to HTML/CSS/MathML in the browser.
 
 ### [TeXnique](https://texnique.xyz/)
 
-A LaTeX speed-typesetting game. How many formulas can you recreate in three minutes?
+The original speed-typesetting game that inspired Typnique.
 
-### [tex2typst](https://github.com/qwinsi/tex2typst)
 
-JavaScript library for conversion between TeX/LaTeX and Typst math code.

@@ -51,7 +51,7 @@ main {
 	margin-top: 7px;
 }
 
-.typst-button, .latex-button {
+.typst-button {
 	font-family: Georgia, "Times New Roman", serif;
 	font-size: 1em;
 	background-color: white;
@@ -61,17 +61,17 @@ main {
 	margin-right: 5px;
 }
 
-.typst-button:hover, .latex-button:hover {
+.typst-button:hover {
 	cursor: pointer;
 	background-color: #eee;
 }
 
-.typst-button:focus, .latex-button:focus {
+.typst-button:focus {
 	outline: none;
 	background-color: #eee;
 }
 
-.typst-button:active, .latex-button:active {
+.typst-button:active {
 	outline: none;
 	background-color: #ccc;
 }
@@ -108,7 +108,7 @@ main {
 	font-family: Georgia, "Times New Roman", serif;
 }
 
-.math, .latex {
+.math {
 	height: 100px;
 	margin-left: auto;
 	margin-right: auto;
@@ -147,7 +147,6 @@ main {
 	margin-top: 50px;
 	margin-left: auto;
 	margin-right: auto;
-	display: none;
 }
 
 #out {
@@ -165,7 +164,7 @@ main {
 	padding: 2px;
 }
 
-.math-source, .latex-source {
+.math-source {
 	font-family: 'Roboto Mono', monospace;
 	resize: none;
 	background-color: black;
@@ -195,13 +194,13 @@ main {
 	color: #ccc;
 	display: none;
 }
-.math.out, .latex.out {
+.math.out {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
 }
-.math, .latex {
+.math {
 	box-sizing: border-box;
 }
 
@@ -269,7 +268,7 @@ label {
     margin: 15px 0;
 }
 
-.leaderboard-controls .typst-button.active, .leaderboard-controls .latex-button.active {
+.leaderboard-controls .typst-button.active {
     background-color: #eee;
 }
 

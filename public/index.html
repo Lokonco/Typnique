@@ -25,10 +25,12 @@
   <link rel="stylesheet" href="assets/style/style.css">
 
   <!-- js lib -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="assets/lib/jquery-3.4.1.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/kern-typ/dist/kern.min.js"></script>
   <script defer src="assets/lib/html2canvas.min.js"></script>
-  <script src="https://bundle.run/pixelmatch@5.0.2"></script>
+  <script>window.module = { exports: null };</script>
+  <script src="assets/lib/pixelmatch.js"></script>
+  <script>window.pixelmatch = window.pixelmatch || window.module.exports; delete window.module;</script>
   <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore-compat.js"></script>
 
@@ -99,8 +101,8 @@
 
         <br><br>
 
-        <button id="start-button-timed" class="latex-button">Timed Game</button>
-        <button id="start-button-untimed" class="latex-button">Zen Mode</button>
+        <button id="start-button-timed" class="typst-button">Timed Game</button>
+        <button id="start-button-untimed" class="typst-button">Zen Mode</button>
 
         <br><br><br>
 
@@ -123,16 +125,16 @@
         <!-- Score submission form -->
         <div id="score-submission" style="margin: 20px 0;">
           <input type="text" id="player-name" maxlength="30" placeholder="Enter your name" style="margin-right: 10px;">
-          <button id="submit-score" class="latex-button">Submit Score</button>
+          <button id="submit-score" class="typst-button">Submit Score</button>
         </div>
 
         <!-- Leaderboard section -->
         <div id="leaderboard-section">
           <h2>Leaderboard</h2>
           <div class="leaderboard-controls">
-            <button id="today-scores" class="latex-button active">Today</button>
-            <button id="month-scores" class="latex-button">This Month</button>
-            <button id="all-time-scores" class="latex-button">All Time</button>
+            <button id="today-scores" class="typst-button active">Today</button>
+            <button id="month-scores" class="typst-button">This Month</button>
+            <button id="all-time-scores" class="typst-button">All Time</button>
           </div>
           <div id="leaderboard-list">
             <!-- Leaderboard entries will be populated here -->
@@ -140,17 +142,17 @@
         </div>
 
         <p id="show-skipped-message" style="display: none;">Check out the problems you skipped?</p>
-        <button id="show-skipped-button" class="latex-button" style="display: none;">Show Skipped</button>
+        <button id="show-skipped-button" class="typst-button" style="display: none;">Show Skipped</button>
         <div id="skipped-problems"></div>
         <br><br>
-        <button id="play-again-button" class="latex-button">Play Again!</button>
+        <button id="play-again-button" class="typst-button">Play Again!</button>
       </div>
 
-      <div id="game-window">
+      <div id="game-window" style="display: none;">
         <div id="top-row">
           <span id="left-buttons">
-            <button id="skip-button" class="latex-button">Skip This Problem</button>
-            <button id="end-game-button" class="latex-button">End Game</button>
+            <button id="skip-button" class="typst-button">Skip This Problem</button>
+            <button id="end-game-button" class="typst-button">End Game</button>
           </span>
           <span id="score-wrapper"> <b> Score: &nbsp; </b> <span id="score"></span></span>
           <span id="timer-wrapper"> <b> Time: &nbsp; </b> <span id="timer"></span></span>
@@ -163,7 +165,7 @@
 
         <p> Try to create the following formula: </p>
 
-        <div class="latex">
+        <div class="math">
           <div id="target"></div>
         </div>
 
@@ -172,11 +174,11 @@
         <p> This is what your output looks like: </p>
 
         <div class="out-container">
-          <div class="latex">
+          <div class="math">
             <div id="shadow-target"></div>
           </div>
 
-          <div class="latex out">
+          <div class="math out">
             <div id="out"></div>
           </div>
         </div>
@@ -185,7 +187,7 @@
 
         <p> Edit your code here: </p>
 
-        <textarea id="user-input" class="latex-source"></textarea>
+        <textarea id="user-input" class="math-source"></textarea>
 
         <br><br>
 

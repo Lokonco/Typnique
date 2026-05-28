@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Convert problems-tex.js and problems-typ.js to JSON for use by the comparison documents."""
+"""Convert problems-typ.js to JSON for use by the Typst comparison document."""
 
 import json
 import re
 import os
 
-ASSETS = os.path.join(os.path.dirname(__file__), '..', 'public', 'assets', 'js')
+ASSETS = os.path.join(os.path.dirname(__file__), '..', 'js')
 OUT    = os.path.dirname(__file__)
 
 
@@ -45,9 +45,10 @@ def parse_js(filepath, value_key):
     return entries
 
 
-for (js_name, key) in [('problems-tex.js', 'latex'), ('problems-typ.js', 'typst')]:
-    entries = parse_js(os.path.join(ASSETS, js_name), key)
-    out_name = js_name.replace('.js', '.json')
-    with open(os.path.join(OUT, out_name), 'w', encoding='utf-8') as f:
-        json.dump(entries, f, indent=2, ensure_ascii=False)
-    print(f"Written {len(entries)} entries to {out_name}")
+js_name = 'problems-typ.js'
+key = 'typst'
+entries = parse_js(os.path.join(ASSETS, js_name), key)
+out_name = js_name.replace('.js', '.json')
+with open(os.path.join(OUT, out_name), 'w', encoding='utf-8') as f:
+    json.dump(entries, f, indent=2, ensure_ascii=False)
+print(f"Written {len(entries)} entries to {out_name}")
