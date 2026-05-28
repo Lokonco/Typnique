@@ -326,32 +326,40 @@ async function loadLeaderboard(timeRange) {
         const now = new Date();
         if (timeRange === 'today') {
             const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            const startOfTomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
             query = query.where('timestamp', '>=', startOfDay);
+            query = query.where('timestamp', '<', startOfTomorrow);
         } else if (timeRange === 'month') {
             const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+            const startOfNextMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1);
             query = query.where('timestamp', '>=', startOfMonth);
+            query = query.where('timestamp', '<', startOfNextMonth);
         }
         
-        const snapshot = await query.orderBy('score', 'desc').limit(10).get();
+        const snapshot = timeRange === 'all-time'
+            ? await query.orderBy('score', 'desc').limit(10).get()
+            : await query.get();
         
         if (snapshot.empty) {
             leaderboardList.append('<p>No scores yet!</p>');
             return;
         }
         
-        let rank = 1;
-        snapshot.forEach((doc) => {
-            const data = doc.data();
-            const scoreEntry = `
-                <div class="leaderboard-entry" style="margin: 5px 0;">
-                    <span class="rank">#${rank}</span>
-                    <span class="name">${escapeHtml(data.name)}</span>
-                    <span class="score">${data.score} points</span>
-                </div>
-            `;
-            leaderboardList.append(scoreEntry);
-            rank++;
-        });
+        const scores = [];
+        snapshot.forEach((doc) => scores.push(doc.data()));
+        scores
+            .sort((a, b) => b.score - a.score)
+            .slice(0, 10)
+            .forEach((data, index) => {
+                const scoreEntry = `
+                    <div class="leaderboard-entry" style="margin: 5px 0;">
+                        <span class="rank">#${index + 1}</span>
+                        <span class="name">${escapeHtml(data.name)}</span>
+                        <span class="score">${data.score} points</span>
+                    </div>
+                `;
+                leaderboardList.append(scoreEntry);
+            });
     } catch (error) {
         console.error("Error loading leaderboard:", error);
         leaderboardList.append('<p>Error loading leaderboard</p>');
