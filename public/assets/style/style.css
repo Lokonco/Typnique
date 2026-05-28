@@ -1,15 +1,8 @@
-@font-face{
-	font-family: KaTeX_Main;
-	src: url('../lib/katex/fonts/KaTeX_Main-Regular.woff2') format('woff');
-	font-weight: 400;
-	font-style: normal;
-}
-
 main {
-	font-family: Katex_Main, serif;
+	font-family: Georgia, "Times New Roman", serif;
 }
 
-.katex {
+.kern {
 	font-size: 1.1em;
 }
 
@@ -58,8 +51,8 @@ main {
 	margin-top: 7px;
 }
 
-.latex-button {
-	font-family: Katex_Main, serif;
+.typst-button, .latex-button {
+	font-family: Georgia, "Times New Roman", serif;
 	font-size: 1em;
 	background-color: white;
 	border: solid 2px black;
@@ -68,17 +61,17 @@ main {
 	margin-right: 5px;
 }
 
-.latex-button:hover {
+.typst-button:hover, .latex-button:hover {
 	cursor: pointer;
 	background-color: #eee;
 }
 
-.latex-button:focus {
+.typst-button:focus, .latex-button:focus {
 	outline: none;
 	background-color: #eee;
 }
 
-.latex-button:active {
+.typst-button:active, .latex-button:active {
 	outline: none;
 	background-color: #ccc;
 }
@@ -108,14 +101,14 @@ main {
 }
 
 #score {
-	font-family: KaTeX_Main, serif;
+	font-family: Georgia, "Times New Roman", serif;
 }
 
 #timer {
-	font-family: KaTeX_Main, serif;
+	font-family: Georgia, "Times New Roman", serif;
 }
 
-.latex {
+.math, .latex {
 	height: 100px;
 	margin-left: auto;
 	margin-right: auto;
@@ -172,7 +165,7 @@ main {
 	padding: 2px;
 }
 
-.latex-source {
+.math-source, .latex-source {
 	font-family: 'Roboto Mono', monospace;
 	resize: none;
 	background-color: black;
@@ -202,13 +195,13 @@ main {
 	color: #ccc;
 	display: none;
 }
-.latex.out {
+.math.out, .latex.out {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
 }
-.latex {
+.math, .latex {
 	box-sizing: border-box;
 }
 
@@ -266,7 +259,7 @@ label {
 #leaderboard-section {
     max-width: 600px;
     margin: 20px auto;
-    font-family: KaTeX_Main, serif;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 .leaderboard-controls {
@@ -276,7 +269,7 @@ label {
     margin: 15px 0;
 }
 
-.leaderboard-controls .latex-button.active {
+.leaderboard-controls .typst-button.active, .leaderboard-controls .latex-button.active {
     background-color: #eee;
 }
 
@@ -293,7 +286,7 @@ label {
     background: #fff;
     border: 1px solid #ddd;
     margin: 5px 0;
-    font-family: KaTeX_Main, serif;
+    font-family: Georgia, "Times New Roman", serif;
     text-align: left;
 }
 
@@ -321,7 +314,7 @@ label {
     padding: 8px;
     font-size: 1em;
     border: solid 2px black;
-    font-family: KaTeX_Main, serif;
+    font-family: Georgia, "Times New Roman", serif;
     width: 200px;
 }
 
